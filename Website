@@ -1,0 +1,317 @@
+```html
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Sell Anything - The Sales Mastery Guide | Dr. Jaideep Ghoshal & Om Namah Shivaya Consultants</title>
+    <meta name="description" content="Master ethical selling, customer psychology, business turnover growth, and AI-assisted sales workflows with Dr. Jaideep Ghoshal (MBBS, PGDHM Gold Medalist).">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (via CDN for layout utilities) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#F4F8F6',
+                            100: '#E1EFEA',
+                            500: '#1B5658',
+                            800: '#0F3D3E',
+                            900: '#0A292A',
+                        },
+                        gold: {
+                            400: '#F7C948',
+                            500: '#F2B632',
+                            600: '#D99B16',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Bricolage Grotesque"', 'sans-serif'],
+                        body: ['"Instrument Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0B1315;
+            --surface: #121E20;
+            --surface-card: #18272A;
+            --border: #23393D;
+            --ink: #EDF4F2;
+            --muted: #9BB0AC;
+            --brand: #1B5658;
+            --brand-light: #2A797B;
+            --accent: #F2B632;
+            --accent-glow: rgba(242, 182, 50, 0.25);
+            --on-accent: #0C1517;
+            --card-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }
+
+        [data-theme="light"] {
+            --bg: #FAFAF7;
+            --surface: #F0F4F2;
+            --surface-card: #FFFFFF;
+            --border: #D0DDD8;
+            --ink: #142225;
+            --muted: #516460;
+            --brand: #0F3D3E;
+            --brand-light: #165658;
+            --accent: #E2A012;
+            --accent-glow: rgba(226, 160, 18, 0.2);
+            --on-accent: #FFFFFF;
+            --card-shadow: 0 10px 30px -10px rgba(15, 61, 62, 0.08);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Instrument Sans', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFE89C 0%, #F2B632 50%, #C98A00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-header {
+            background: rgba(18, 30, 32, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        [data-theme="light"] .glass-header {
+            background: rgba(250, 250, 247, 0.85);
+        }
+
+        .card-executive {
+            background: var(--surface-card);
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+        }
+        .card-executive:hover {
+            border-color: var(--accent);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #F5CA48 0%, #F2B632 100%);
+            color: #0F1D20;
+            font-weight: 700;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(242, 182, 50, 0.4);
+        }
+        .btn-gold:active {
+            transform: translateY(0);
+        }
+
+        .btn-outline-gold {
+            border: 2px solid var(--accent);
+            color: var(--ink);
+        }
+        .btn-outline-gold:hover {
+            background: var(--accent);
+            color: #0F1D20;
+        }
+
+        .tab-btn.active {
+            background-color: var(--brand);
+            color: #FFFFFF;
+            border-color: var(--accent);
+        }
+
+        .badge-gold {
+            background: rgba(242, 182, 50, 0.12);
+            border: 1px solid rgba(242, 182, 50, 0.3);
+            color: var(--accent);
+        }
+
+        /* Diagnostic Tool Step Indicators */
+        .step-pill.active {
+            background: var(--accent);
+            color: #0C1517;
+            font-weight: bold;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--brand);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-yellow-400 selection:text-black">
+
+    <!-- STICKY NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Title -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-slate-900 font-extrabold text-xl shadow-lg">
+                        S
+                    </div>
+                    <div>
+                        <span class="block font-heading font-extrabold text-lg sm:text-xl leading-tight tracking-tight text-[var(--ink)]">
+                            SELL ANYTHING
+                        </span>
+                        <span class="block text-xs text-[var(--muted)] font-medium tracking-wide">
+                            The Sales Mastery Guide
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Nav Links Desktop -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-[var(--muted)]">
+                    <a href="#about" class="hover:text-[var(--accent)] transition-colors">About Dr. Ghoshal</a>
+                    <a href="#diagnostic" class="hover:text-[var(--accent)] transition-colors">Sales Quiz</a>
+                    <a href="#services" class="hover:text-[var(--accent)] transition-colors">Consulting Services</a>
+                    <a href="#methodology" class="hover:text-[var(--accent)] transition-colors">5-Step Method</a>
+                    <a href="#why-us" class="hover:text-[var(--accent)] transition-colors">Why Choose Us</a>
+                </nav>
+
+                <!-- Action Controls -->
+                <div class="flex items-center gap-3">
+                    <!-- Theme Switcher -->
+                    <button id="themeToggle" class="p-2.5 rounded-full border border-[var(--border)] text-[var(--muted)] hover:text-[var(--ink)] hover:border-[var(--accent)] transition-all" aria-label="Toggle dark/light mode">
+                        <i class="fa-solid fa-moon text-lg dark:hidden"></i>
+                        <i class="fa-solid fa-sun text-lg hidden dark:block text-yellow-400"></i>
+                    </button>
+
+                    <!-- Direct WhatsApp Button -->
+                    <a href="https://wa.me/919175239975?text=Hello%20Dr.%20Ghoshal%2C%20I%20want%20to%20schedule%20an%20Executive%20Sales%20Consultation." 
+                       target="_blank" 
+                       class="hidden sm:inline-flex items-center gap-2 btn-gold px-5 py-2.5 rounded-full text-sm font-bold">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Book Call</span>
+                    </a>
+
+                    <!-- Mobile Menu Trigger -->
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 text-2xl text-[var(--ink)] focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-b border-[var(--border)] bg-[var(--surface)] px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-base font-medium text-[var(--ink)] hover:text-[var(--accent)]">About Dr. Ghoshal</a>
+            <a href="#diagnostic" class="block py-2 text-base font-medium text-[var(--ink)] hover:text-[var(--accent)]">Diagnostic Readiness Quiz</a>
+            <a href="#services" class="block py-2 text-base font-medium text-[var(--ink)] hover:text-[var(--accent)]">Consulting Services</a>
+            <a href="#methodology" class="block py-2 text-base font-medium text-[var(--ink)] hover:text-[var(--accent)]">5-Step Methodology</a>
+            <a href="#why-us" class="block py-2 text-base font-medium text-[var(--ink)] hover:text-[var(--accent)]">Why Work With Us</a>
+            <a href="#book" class="block py-2 text-base font-medium text-[var(--ink)] hover:text-[var(--accent)]">Book Consultation</a>
+            <div class="pt-4 border-t border-[var(--border)]">
+                <a href="https://wa.me/919175239975?text=Hello%20Dr.%20Ghoshal%2C%20I%20would%20like%20to%20book%20an%20introductory%20consultation." target="_blank" class="w-full flex items-center justify-center gap-2 btn-gold py-3 rounded-xl text-center font-bold">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-[var(--surface)] to-[var(--bg)]">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-teal-800/20 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-gold text-xs font-bold uppercase tracking-widest">
+                        <i class="fa-solid fa-award"></i> Om Namah Shivaya Consultants
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-[var(--ink)]">
+                        Turn Business Challenges into <span class="gold-gradient-text">Growth Opportunities</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-[var(--muted)] max-w-2xl mx-auto lg:mx-0 font-normal">
+                        Practical business insights, customer psychology, and AI-assisted selling strategies. Bridge medical science rigor with executive sales mastery.
+                    </p>
+
+                    <div class="p-4 rounded-xl border-l-4 border-yellow-500 bg-[var(--surface-card)] text-sm sm:text-base text-[var(--ink)] max-w-2xl">
+                        <p class="font-medium italic">
+                            "Struggling with stagnant sales, high customer hesitation, low conversion rates, or fierce price competition? You don't just need to work harder — you need to diagnose what's holding you back."
+                        </p>
+                    </div>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#diagnostic" class="btn-gold px-8 py-4 rounded-full text-base font-bold flex items-center justify-center gap-3">
+                            <span>Take 2-Min Sales Readiness Quiz</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="https://wa.me/919175239975?text=Hello%20Dr.%20Ghoshal%2C%20I%20would%20like%20to%20book%20an%20introductory%20consultation." target="_blank" class="btn-outline-gold px-8 py-4 rounded-full text-base font-bold flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-500 text-lg"></i>
+                            <span>Direct WhatsApp Consultation</span>
+                        </a>
+                    </div>
+
+                    <!-- Metric Badges -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-[var(--border)] max-w-xl mx-auto lg:mx-0">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-[var(--accent)] font-heading">32+</span>
+                            <span class="text-xs sm:text-sm text-[var(--muted)]">Years Professional Experience</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-[var(--accent)] font-heading">Gold</span>
+                            <span class="text-xs sm:text-sm text-[var(--muted)]">Medalist PGDHM Credential</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-[var(--accent)] font-heading">100%</span>
+                            <span class="text-xs sm:text-sm text-[var(--muted)]">Customized Business Diagnostics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Executive Highlight Card -->
+                <div class="lg:col-span-5">
+                    <div class="card-executive p-8 rounded-3xl relative overflow-hidden">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-yellow-500/10 rounded-full blur-2xl"></div>
+
+                        <div class="flex items-center gap-4 mb-6">
+                            <
